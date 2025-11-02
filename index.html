@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF--8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skyline Infrastructure | Real Estate Technology</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --color-primary: #377DFF; /* A brighter, more modern blue */
+        --color-primary-dark: #2c64cc;
+        --color-secondary: #0F172A; /* A deep navy for text and accents */
+        --color-accent: #F97316; /* A warm orange for contrast */
+        --color-bg-light: #F8FAFC; /* A very light gray, almost white */
+        --color-text-dark: #0F172A;
+        --color-text-medium: #475569;
+        --color-text-light: #64748B;
+        --color-border: #E2E8F0;
+      }
+      body {
+        font-family: 'Manrope', sans-serif;
+        color: var(--color-text-medium);
+        background-color: #fff;
+        background: linear-gradient(180deg, white, var(--color-bg-light));
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Manrope', sans-serif;
+        font-weight: 800;
+        color: var(--color-text-dark);
+        letter-spacing: -0.02em;
+      }
+      .primary-bg {
+        background-color: var(--color-primary);
+      }
+      .primary-text {
+        color: var(--color-primary);
+      }
+      .primary-border {
+        border-color: var(--color-primary);
+      }
+      .glass-header {
+        background-color: rgba(255, 255, 255, 0.7);
+        backdrop-filter: saturate(180%) blur(12px);
+      }
+      input[type="text"], input[type="email"], input[type="password"], textarea {
+        border: 1px solid var(--color-border);
+        transition: all 0.2s ease-in-out;
+        background-color: #fff !important;
+      }
+      input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus {
+        border-color: var(--color-primary);
+        box-shadow: 0 0 0 3px rgba(55, 125, 255, 0.2);
+      }
+      .button-primary {
+        background-color: var(--color-primary);
+        color: white;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        padding: 0.875rem 1.75rem;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 4px 14px 0 rgba(55, 125, 255, 0.39);
+      }
+      .button-primary:hover {
+        background-color: var(--color-primary-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px 0 rgba(55, 125, 255, 0.25);
+      }
+      .button-secondary {
+        background-color: white;
+        color: var(--color-primary);
+        border-radius: 0.5rem;
+        font-weight: 600;
+        padding: 0.875rem 1.75rem;
+        transition: all 0.2s ease-in-out;
+        border: 1px solid var(--color-border);
+      }
+      .button-secondary:hover {
+        background-color: var(--color-bg-light);
+        border-color: var(--color-primary);
+        transform: translateY(-2px);
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fade-in-up {
+        animation: fadeInUp 0.8s ease-out forwards;
+      }
+      .animation-delay-200 { animation-delay: 200ms; }
+      .animation-delay-400 { animation-delay: 400ms; }
+      .animation-delay-600 { animation-delay: 600ms; }
+
+      @keyframes draw-path {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+      .animate-draw-path {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: draw-path 2s 0.8s ease-out forwards;
+      }
+
+      @keyframes glow-pulse {
+        50% {
+          box-shadow: 0 0 25px rgba(55, 125, 255, 0.5);
+        }
+      }
+      .animate-glow-pulse {
+        animation: glow-pulse 3s infinite ease-in-out;
+      }
+      
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+        100% { transform: translateY(0px); }
+      }
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+
+      .deco-shape {
+        position: absolute;
+        border-radius: 9999px;
+        opacity: 0.05;
+        z-index: 0;
+        background: linear-gradient(45deg, var(--color-primary), var(--color-accent));
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-white">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
