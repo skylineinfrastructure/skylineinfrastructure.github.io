@@ -4,7 +4,8 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  // Since your repo is skylineinfrastructure.github.io, it deploys to the root.
-  // The base path should be '/'.
-  base: '/',
+  // The 'base' path should match your GitHub repository name.
+  // For example, if your repo URL is https://github.com/your-username/skyline-app,
+  // the base path should be '/skyline-app/'.
+  base: '/skyline-app/',
 })
